@@ -1,0 +1,121 @@
+- !<AssetImportMetadata/dcd90940-5aa1-414d-a32f-f303c6e55821>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 921e6351-1a3f-466d-b7cb-e71c0e5fbe55
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 921e6351-1a3f-466d-b7cb-e71c0e5fbe55
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 522cd6d6-e294-4bc5-bf17-994e2d9c3457
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/522cd6d6-e294-4bc5-bf17-994e2d9c3457>
+  SourceRemaps:
+    - 08ffa969-c26e-467a-befc-b436702ff2b1: d48d1104-1215-4bd1-8d1b-ebca91e5eef1
+    - 2b9961cd-b096-4dc0-9d5f-e1ab1efa6d1c: 5cb5c572-8ca7-4600-92e3-68cbfc71580c
+    - 43d0cf3d-51b1-4d3e-969c-14fc72782f0a: 7881bb3e-071a-445b-98af-e5ab2bbdda7a
+    - 6d3193eb-45ae-4a02-aa9c-035409f7bc5a: b4b05d6f-e82d-4c00-8e2a-33aeb4d8d569
+    - 921e6351-1a3f-466d-b7cb-e71c0e5fbe55: f5b6d9c3-f389-425b-a2ff-88f2a57726c1
+    - d1f0155d-c698-43a2-bbec-ec00bfd9a6ae: e5d1f8d9-5148-4b25-81bf-699fe3515a97
+    - e297b665-0963-4907-b702-2d8c3d2e5b52: 9a52bcab-c2d7-4842-b408-25d8070a3a4f
+  SourceState: !<own> f5b6d9c3-f389-425b-a2ff-88f2a57726c1
+- !<SceneObject/5cb5c572-8ca7-4600-92e3-68cbfc71580c>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9a52bcab-c2d7-4842-b408-25d8070a3a4f
+  Components:
+    - !<own> d48d1104-1215-4bd1-8d1b-ebca91e5eef1
+- !<SceneObject/7881bb3e-071a-445b-98af-e5ab2bbdda7a>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5cb5c572-8ca7-4600-92e3-68cbfc71580c
+  Components:
+    []
+- !<SceneObject/9a52bcab-c2d7-4842-b408-25d8070a3a4f>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e5d1f8d9-5148-4b25-81bf-699fe3515a97
+- !<SceneObject/b4b05d6f-e82d-4c00-8e2a-33aeb4d8d569>
+  PrefabRemaps:
+    []
+  Name: 0680d08d-b0aa-75e9-8000-13dd29a45c83-model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7881bb3e-071a-445b-98af-e5ab2bbdda7a
+  Components:
+    []
+- !<AnimationPlayer/d48d1104-1215-4bd1-8d1b-ebca91e5eef1>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<RenderMeshVisual/e5d1f8d9-5148-4b25-81bf-699fe3515a97>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4950f54d-8f04-447b-b5d8-95bdaa0be2c3
+  Mesh: !<reference> 09deb9de-d78f-4e71-968d-d30693d2ecf2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/f5b6d9c3-f389-425b-a2ff-88f2a57726c1>
+  PackagePath: ""
+  objects:
+    - !<own> b4b05d6f-e82d-4c00-8e2a-33aeb4d8d569
+  LazyLoading: false
+  RetainAssets: true

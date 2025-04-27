@@ -1,0 +1,121 @@
+- !<AssetImportMetadata/e102b06d-7c32-4fde-b26d-2d87ad1d796a>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> b7c20951-27c3-4b20-b880-40d25f5b973a
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> b7c20951-27c3-4b20-b880-40d25f5b973a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b7e8ee08-286b-471f-9b4b-4f6ed554e016
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/5a54185f-e613-4779-abe9-3572ae6f3b5f>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9b0d5c47-73bc-46c7-8bee-2e01f7be64d7
+  Components:
+    - !<own> dc4f02d7-27b7-4d12-92da-97e59ce89a4f
+- !<SceneObject/74dc21c5-5bf7-41de-b855-28a2ce72fbf8>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5a54185f-e613-4779-abe9-3572ae6f3b5f
+  Components:
+    []
+- !<ObjectPrefab/853ff0d4-6e96-43dc-8616-88d09d4022cb>
+  PackagePath: ""
+  objects:
+    - !<own> aa150504-ccf4-4981-8374-b06eceb66ee4
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/9b0d5c47-73bc-46c7-8bee-2e01f7be64d7>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c5970ee2-c100-4298-b59e-74c8ba56c621
+- !<SceneObject/aa150504-ccf4-4981-8374-b06eceb66ee4>
+  PrefabRemaps:
+    []
+  Name: 0680d08d-b0aa-75e9-8000-13dd29a45c83-model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 74dc21c5-5bf7-41de-b855-28a2ce72fbf8
+  Components:
+    []
+- !<ObjectPrefabAssetData/b7e8ee08-286b-471f-9b4b-4f6ed554e016>
+  SourceRemaps:
+    - 1f7172b5-7bd9-42a4-86d2-1204674f7afc: 9b0d5c47-73bc-46c7-8bee-2e01f7be64d7
+    - 483d4cb2-f4b3-4faf-af97-a749ffd2d654: dc4f02d7-27b7-4d12-92da-97e59ce89a4f
+    - 84c3a74f-5d59-4f54-aa94-977e6a7fab63: 74dc21c5-5bf7-41de-b855-28a2ce72fbf8
+    - a99879b7-3bc7-4583-8699-803cd9ea60cb: c5970ee2-c100-4298-b59e-74c8ba56c621
+    - b7c20951-27c3-4b20-b880-40d25f5b973a: 853ff0d4-6e96-43dc-8616-88d09d4022cb
+    - c4e28866-06ea-4821-a228-ea612c521597: aa150504-ccf4-4981-8374-b06eceb66ee4
+    - f4a4fc46-9180-4125-ad6c-04332e8b733b: 5a54185f-e613-4779-abe9-3572ae6f3b5f
+  SourceState: !<own> 853ff0d4-6e96-43dc-8616-88d09d4022cb
+- !<RenderMeshVisual/c5970ee2-c100-4298-b59e-74c8ba56c621>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f8d271f1-dfea-42d1-abf7-db55ce62cfa1
+  Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<AnimationPlayer/dc4f02d7-27b7-4d12-92da-97e59ce89a4f>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []

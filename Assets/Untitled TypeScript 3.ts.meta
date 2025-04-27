@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/32583bc6-6e9d-40d7-878f-6d089bff53c9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 61c444b7-80df-4804-9e51-a40b1d582791
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 61c444b7-80df-4804-9e51-a40b1d582791
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8c3f7cf6-117c-4634-851b-2d40a8f51ff7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8c3f7cf6-117c-4634-851b-2d40a8f51ff7>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ff8b5e85-b632-465e-9655-cf8a7f151b72
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cameraObject: false
+    kunaiSO: false
+    kunais: false
+    maxTurns: false
+    textComponent: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - kunais: !<reference.ObjectPrefab[]>
+        - !<reference> 3227d62b-f1a0-40c5-88f3-b2445b36de2e
+        - !<reference> 576db1d5-382a-46a9-bcaa-89d9de5b3194
+        - !<reference> 728b4d1f-d0cb-4d17-9cb5-952b7f375895
+        - !<reference> eb786b8e-3009-4166-9a9e-2509236b568c
+      maxTurns: !<float> 10.000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      kunaiSO: !<reference.SceneObject[]>
+        - !<reference> 9d0a2edf-19cf-45da-9ded-945bc607e644
+        - !<reference> 4b840cec-92d2-4dbd-b691-fe4d8ea38305
+        - !<reference> c6a1d0a2-599f-4f50-bf55-3ed684577ae5
+        - !<reference> 5f8f21f6-9fe4-4260-8cd9-46c9379fc512
+      textComponent: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input Asset.ObjectPrefab[] kunais"
+    - "// @input SceneObject[] kunaiSO"
+    - // @input float maxTurns = 5
+    - // @input SceneObject cameraObject
+    - // @input Component.Text3D textComponent
