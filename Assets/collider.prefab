@@ -1,0 +1,39 @@
+- !<ObjectPrefab/565fb5bb-cfde-43f0-a5d2-0ddabd8c8de0>
+  PackagePath: ""
+  objects:
+    - !<own> e7564969-ae49-417f-a310-13ce181c45ff
+  LazyLoading: false
+  RetainAssets: true
+- !<ColliderComponent/9fa45f52-6207-474c-90ac-08102780ae6b>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: false
+    Radius: 10.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: true
+- !<SceneObject/e7564969-ae49-417f-a310-13ce181c45ff>
+  PrefabRemaps:
+    []
+  Name: collider
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9fa45f52-6207-474c-90ac-08102780ae6b

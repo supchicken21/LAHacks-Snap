@@ -1,0 +1,177 @@
+- !<AssetImportMetadata/129a6d9f-f424-45d8-868d-e199c3dc73d9>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 3227d62b-f1a0-40c5-88f3-b2445b36de2e
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 3227d62b-f1a0-40c5-88f3-b2445b36de2e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> f83a89fd-8d2d-438b-a05d-276e1a624c98
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ColliderComponent/099a71e3-a2ce-47c2-af53-1b1014811ca7>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> 09deb9de-d78f-4e71-968d-d30693d2ecf2
+    Convex: false
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<RenderMeshVisual/284d6700-66ce-48bd-b64a-fb9b7f37cbbd>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f8d271f1-dfea-42d1-abf7-db55ce62cfa1
+  Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/2be1ea77-f950-4c18-ae6c-baf29fc70447>
+  PackagePath: ""
+  objects:
+    - !<own> d0cbbd73-53c1-4059-93b3-f561cd63caf0
+  LazyLoading: false
+  RetainAssets: true
+- !<ColliderComponent/31b2a83f-1fee-4a1b-a8ac-39e12b82822e>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: false
+  Shape: !<Sphere>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<SceneObject/32c25806-5d20-4f5b-983b-2c3de0d347b1>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 284d6700-66ce-48bd-b64a-fb9b7f37cbbd
+- !<AnimationPlayer/a1ac070a-3dba-4e28-9c32-68fc7513f37b>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<SceneObject/a508c989-208e-4ecc-9d8e-dcda296851fe>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 32c25806-5d20-4f5b-983b-2c3de0d347b1
+  Components:
+    - !<own> a1ac070a-3dba-4e28-9c32-68fc7513f37b
+- !<SceneObject/cba8b9c3-c75b-41e9-9330-89a780989235>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a508c989-208e-4ecc-9d8e-dcda296851fe
+  Components:
+    []
+- !<SceneObject/d0cbbd73-53c1-4059-93b3-f561cd63caf0>
+  PrefabRemaps:
+    []
+  Name: Kunai 1
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -56.995926, y: -5.751656, z: -151.775467}
+    rotation: {x: -30.000000, y: -0.000000, z: 20.000000}
+    scale: {x: 30.000000, y: 30.000000, z: 30.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> cba8b9c3-c75b-41e9-9330-89a780989235
+    - !<own> f85c6ec2-e36e-4539-8d63-da70944c97e8
+  Components:
+    - !<own> 099a71e3-a2ce-47c2-af53-1b1014811ca7
+- !<ObjectPrefabAssetData/f83a89fd-8d2d-438b-a05d-276e1a624c98>
+  SourceRemaps:
+    - 01e307e9-6519-4113-b274-ea4c85e8ca46: d0cbbd73-53c1-4059-93b3-f561cd63caf0
+    - 15a4c04d-cff1-4faf-9d12-eef4f4ea1d03: a1ac070a-3dba-4e28-9c32-68fc7513f37b
+    - 1cef5b6b-9f4e-4ed5-969f-2f09404afea8: cba8b9c3-c75b-41e9-9330-89a780989235
+    - 1e2b3a7f-d2da-4557-863a-7797b0414a34: 32c25806-5d20-4f5b-983b-2c3de0d347b1
+    - 3227d62b-f1a0-40c5-88f3-b2445b36de2e: 2be1ea77-f950-4c18-ae6c-baf29fc70447
+    - 33a93cb5-2e48-422e-8cb8-ee1e9f241080: 099a71e3-a2ce-47c2-af53-1b1014811ca7
+    - 72896475-6c98-4af0-93bd-a3026ab761b7: a508c989-208e-4ecc-9d8e-dcda296851fe
+    - c5445f1d-aa28-4797-9b5a-fa8246c53320: 31b2a83f-1fee-4a1b-a8ac-39e12b82822e
+    - ceb5fab1-e83b-4576-987c-27b6afcbfc13: 284d6700-66ce-48bd-b64a-fb9b7f37cbbd
+    - deb8edaa-ec2c-477b-a8b9-8881f9a55166: f85c6ec2-e36e-4539-8d63-da70944c97e8
+  SourceState: !<own> 2be1ea77-f950-4c18-ae6c-baf29fc70447
+- !<SceneObject/f85c6ec2-e36e-4539-8d63-da70944c97e8>
+  PrefabRemaps:
+    []
+  Name: Collider
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 0.100000, y: 0.100000, z: 0.100000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 31b2a83f-1fee-4a1b-a8ac-39e12b82822e

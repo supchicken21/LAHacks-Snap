@@ -1,0 +1,167 @@
+- !<AssetImportMetadata/267b41b2-fd59-41bd-a5c7-a158c8598dcb>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> eb786b8e-3009-4166-9a9e-2509236b568c
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> eb786b8e-3009-4166-9a9e-2509236b568c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 63f52ac4-c695-454a-9e14-5686530c25e2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/1688c7a6-6ff0-4ebe-b64d-6bae0e8bf004>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 62415dc7-92f1-484f-bf26-4cd33be2efcf
+- !<SceneObject/56c1a113-1fa2-4ed8-8eaa-94042c09fb66>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1688c7a6-6ff0-4ebe-b64d-6bae0e8bf004
+  Components:
+    - !<own> d855045e-29df-43f1-ac90-cf8e9485e7dc
+- !<ObjectPrefab/62288cea-5147-48ad-9a30-08f1d90d8442>
+  PackagePath: ""
+  objects:
+    - !<own> 74cc06d1-0f02-4bf1-8a8c-552bef332c4c
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/62415dc7-92f1-484f-bf26-4cd33be2efcf>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f8d271f1-dfea-42d1-abf7-db55ce62cfa1
+  Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/63f52ac4-c695-454a-9e14-5686530c25e2>
+  SourceRemaps:
+    - 5f5a46ff-5616-4de1-8692-a471cd15270c: 1688c7a6-6ff0-4ebe-b64d-6bae0e8bf004
+    - 70251ddc-aa45-444b-b6af-9162afeaad34: 9bfa8d9b-1e7e-48e6-bcc0-085058538917
+    - a042c2b5-95f9-456a-bea4-bbf6d276a3f0: 74cc06d1-0f02-4bf1-8a8c-552bef332c4c
+    - a2d7d5bd-325c-4ab4-919f-9fe903c1db09: 740a9fb1-d8a7-4268-866f-006c4fec272b
+    - cd515941-0bf1-4b13-ab15-e1b0bf05335a: 62415dc7-92f1-484f-bf26-4cd33be2efcf
+    - d89c4907-7b66-41f1-a2f2-9d39e132621d: 92dace99-549a-45dc-952e-f5697dbcd1c2
+    - e860a1dd-0806-4286-be19-fcce1ba86c31: d855045e-29df-43f1-ac90-cf8e9485e7dc
+    - eb786b8e-3009-4166-9a9e-2509236b568c: 62288cea-5147-48ad-9a30-08f1d90d8442
+    - ec078576-9ecc-4520-acb2-3bf560d72deb: 56c1a113-1fa2-4ed8-8eaa-94042c09fb66
+  SourceState: !<own> 62288cea-5147-48ad-9a30-08f1d90d8442
+- !<ColliderComponent/740a9fb1-d8a7-4268-866f-006c4fec272b>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> 09deb9de-d78f-4e71-968d-d30693d2ecf2
+    Convex: false
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<SceneObject/74cc06d1-0f02-4bf1-8a8c-552bef332c4c>
+  PrefabRemaps:
+    []
+  Name: Kunai 4
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 22.266174, y: -5.523101, z: -151.870193}
+    rotation: {x: -30.000000, y: -0.000000, z: 20.000000}
+    scale: {x: 30.000000, y: 30.000000, z: 30.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 92dace99-549a-45dc-952e-f5697dbcd1c2
+  Components:
+    - !<own> 740a9fb1-d8a7-4268-866f-006c4fec272b
+    - !<own> 9bfa8d9b-1e7e-48e6-bcc0-085058538917
+- !<SceneObject/92dace99-549a-45dc-952e-f5697dbcd1c2>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 56c1a113-1fa2-4ed8-8eaa-94042c09fb66
+  Components:
+    []
+- !<BodyComponent/9bfa8d9b-1e7e-48e6-bcc0-085058538917>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+    Convex: true
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<AnimationPlayer/d855045e-29df-43f1-ac90-cf8e9485e7dc>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []

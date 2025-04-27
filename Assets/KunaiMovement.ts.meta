@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/f5a7ca33-3253-40c0-a1df-a58a0be1c1e3>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e15e6b11-d38d-44c6-a210-58941416383f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e15e6b11-d38d-44c6-a210-58941416383f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 41a2cd55-3b11-4129-bf7b-94aab83d442d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/41a2cd55-3b11-4129-bf7b-94aab83d442d>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 62c406ff-5edf-42d4-8397-873d42fd087a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cameraObject: false
+    kunaiSO: false
+    kunais: false
+    maxTurns: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - maxTurns: !<float> 15.000000
+      kunais: !<reference.SceneObject[]>
+        - !<reference> 5f8f21f6-9fe4-4260-8cd9-46c9379fc512
+        - !<reference> 4cfb31ea-aad0-429d-93a1-5098d0d2835b
+        - !<reference> c6a1d0a2-599f-4f50-bf55-3ed684577ae5
+        - !<reference> 4b840cec-92d2-4dbd-b691-fe4d8ea38305
+        - !<reference> 9d0a2edf-19cf-45da-9ded-945bc607e644
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      kunaiSO: !<reference.SceneObject[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input Asset.ObjectPrefab[] kunais"
+    - "// @input SceneObject[] kunaiSO"
+    - // @input float maxTurns = 5
+    - // @input SceneObject cameraObject

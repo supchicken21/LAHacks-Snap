@@ -1,0 +1,164 @@
+- !<ObjectPrefab/3da8e8bd-aaa1-46c6-9fc1-4ecd7557c02f>
+  PackagePath: ""
+  objects:
+    - !<own> 8d4556d5-78e2-4952-8997-a964fa13b695
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/04bf0b18-ce06-4826-a294-b56f80c53bb5>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c24f7b99-d3de-474b-aabb-7d3a6c785570
+- !<ColliderComponent/0757f6b5-4ce0-43bf-b154-8ab59be854a0>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+    Convex: true
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<SceneObject/16dc3683-54c3-4bcb-a283-b4ced227c4bb>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1ff548a9-db30-4b9d-a427-66a39a33c1cd
+  Components:
+    []
+- !<SceneObject/1ff548a9-db30-4b9d-a427-66a39a33c1cd>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 04bf0b18-ce06-4826-a294-b56f80c53bb5
+  Components:
+    - !<own> 3c5a1c28-adfc-4141-a9e9-8c6085cc47a5
+- !<AnimationPlayer/3c5a1c28-adfc-4141-a9e9-8c6085cc47a5>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<SceneObject/8d4556d5-78e2-4952-8997-a964fa13b695>
+  PrefabRemaps:
+    []
+  Name: Kunai 5
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 47.725754, y: -4.971405, z: -152.098679}
+    rotation: {x: -30.000000, y: -0.000000, z: 20.000000}
+    scale: {x: 30.000000, y: 30.000000, z: 30.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 16dc3683-54c3-4bcb-a283-b4ced227c4bb
+  Components:
+    - !<own> 0757f6b5-4ce0-43bf-b154-8ab59be854a0
+    - !<own> 90bdbdba-08b4-434f-a748-f485d1583e72
+    - !<own> f0c75d3e-28f8-4bfa-8740-05be5a7f58d4
+- !<BodyComponent/90bdbdba-08b4-434f-a748-f485d1583e72>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+    Convex: true
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<RenderMeshVisual/c24f7b99-d3de-474b-aabb-7d3a6c785570>
+  PrefabRemaps:
+    []
+  Name: model
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f8d271f1-dfea-42d1-abf7-db55ce62cfa1
+  Mesh: !<reference> e9d7cd2e-ddd4-443a-bbf0-add486506e4a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/f0c75d3e-28f8-4bfa-8740-05be5a7f58d4>
+  PrefabRemaps:
+    []
+  Name: KunaiMovement
+  Enabled: true
+  ScriptAsset: !<reference> e15e6b11-d38d-44c6-a210-58941416383f
+  ScriptInputsDefault:
+    kunais: true
+    kunaiSO: true
+    maxTurns: true
+    cameraObject: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      kunais: !<reference.ObjectPrefab[]>
+        []
+      kunaiSO: !<reference.SceneObject[]>
+        []
+      maxTurns: !<float> 15.000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}

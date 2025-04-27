@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/fc496217-711d-4946-ba58-5bd23fd59834>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 92d590c4-0e42-4d11-b047-dcd12df6191a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 92d590c4-0e42-4d11-b047-dcd12df6191a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 440244ef-0559-47ac-8b69-2e319bfc422c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/440244ef-0559-47ac-8b69-2e319bfc422c>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 22cb8958-a13a-42a5-a796-60b36a210e46
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cameraColliderComponent: false
+    cameraObject: false
+    kunais: false
+    textComponent: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      kunais: !<reference.SceneObject[]>
+        []
+      cameraColliderComponent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textComponent: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject cameraObject
+    - "// @input SceneObject[] kunais"
+    - // @input Component.ColliderComponent cameraColliderComponent
+    - // @input Component.Text3D textComponent
