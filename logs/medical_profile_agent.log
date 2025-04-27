@@ -1,0 +1,12 @@
+WARNING:  [medical_agent]: Endpoint configuration overrides mailbox setting.
+INFO:     [medical_agent]: Starting agent with address: agent1q2e74xhpyrm3vehhj4ztrjvf24sxgvcsfgrl9hdzrr5a75dn2jvzsj5y4al
+INFO:     [medical_agent]: Agent medical_agent starting up.
+INFO:     [medical_agent]: Address: agent1q2e74xhpyrm3vehhj4ztrjvf24sxgvcsfgrl9hdzrr5a75dn2jvzsj5y4al
+INFO:     [medical_agent]: Agent inspector available at https://agentverse.ai/inspect/?uri=http%3A//127.0.0.1%3A8008&address=agent1q2e74xhpyrm3vehhj4ztrjvf24sxgvcsfgrl9hdzrr5a75dn2jvzsj5y4al
+INFO:     [medical_agent]: Starting server on http://0.0.0.0:8008 (Press CTRL+C to quit)
+INFO:     [uagents.registration]: Registration on Almanac API successful
+INFO:     [uagents.registration]: Almanac contract registration is up to date!
+INFO:     [medical_agent]: Received message from agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle: Request medical info plan
+INFO:     [medical_agent]: Generating medical recovery plan...
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     [medical_agent]: Sending plan back...

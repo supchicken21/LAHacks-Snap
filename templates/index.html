@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Auto-refresh the page -->
+    <meta http-equiv="refresh" content="{{ refresh_interval }}">
+    <title>Personalized Weekly Plan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 0; /* Remove top padding, header will handle space */
+            background-color: #eef2f7; /* Lighter, cooler background */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .page-header {
+            background: linear-gradient(to right, #6a85b6, #bac8e0);
+            color: #fff;
+            padding: 2.5rem 1rem; /* Adjusted padding */
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        .page-header h1 {
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .page-header .bi {
+            font-size: 1.5em; /* Make icon slightly larger */
+        }
+        .container {
+            max-width: 1140px;
+            flex-grow: 1; /* Allow container to grow */
+            display: flex; /* Flex layout for report and chat */
+            flex-direction: column; /* Stack report and chat vertically */
+            gap: 1.5rem; /* Space between report and chat */
+            padding-bottom: 1rem; /* Space at the bottom */
+        }
+        .report-section {
+             /* Container for report card + status */
+             /* No special styling needed now */
+        }
+        .alert {
+             margin-bottom: 1rem; /* Ensure space below alert */
+        }
+        .alert span, .alert small {
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
+            gap: 0.4rem; /* Space between icon and text */
+        }
+        .report-card {
+            background-color: #fff;
+            border-radius: 0.75rem; /* Slightly more rounded */
+            box-shadow: 0 4px 12px rgba(0,0,0,.08); /* Softer shadow */
+            border: none; /* Remove default border */
+            position: relative;
+            overflow: hidden; 
+            flex-shrink: 0; /* Prevent report card from shrinking too much */
+        }
+        /* Report area styling for wrapping and vertical scroll */
+        .report-content-area {
+            padding: 1.5rem; 
+            max-height: 45vh; /* Adjust height */
+            overflow-y: auto; /* Vertical scroll only */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            text-align: left;
+        }
+        /* Ensure pre tag wraps text */
+        .report-content-area pre {
+             margin: 0;
+             padding: 0;
+             background: none;
+             border: none;
+             font-size: 0.85rem;
+             line-height: 1.6; /* Improve readability */
+             white-space: pre-wrap;    /* Wrap lines but preserve line breaks */
+             word-wrap: break-word;    /* Break long words */
+             overflow-wrap: break-word; /* Alternative for word break */
+        }
+        /* Remove padding from card-body as it's now on report-content-area */
+        .report-card .card-body {
+            padding: 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 15px;  /* Adjust positioning */
+            right: 15px;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight background for visibility */
+        }
+        /* Chat Styles (Merged) */
+        .chat-section {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Allow chat to take remaining space */
+            min-height: 0; /* Prevent chat section from overflowing container */
+            background-color: #fff; /* Card background */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+            padding: 1rem;
+        }
+        .chat-section h2 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #495057;
+        }
+        .chat-box {
+            flex-grow: 1;
+            border: 1px solid #eee;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            overflow-y: auto;
+            background-color: #f8f9fa; /* Light background for chat history */
+        }
+        .chat-message {
+            margin-bottom: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .user-message {
+            background-color: #cce5ff; /* Slightly different blue */
+            margin-left: auto; 
+            text-align: right;
+        }
+        .bot-message {
+            background-color: #e9ecef; /* Slightly different grey */
+            margin-right: auto; 
+            text-align: left;
+            white-space: pre-wrap; 
+        }
+        .chat-input {
+            display: flex;
+            gap: 0.5rem;
+        }
+        #userInput {
+            flex-grow: 1;
+        }
+        .typing-indicator span {
+            /* ... existing styles ... */
+        }
+        @keyframes typing {
+            /* ... existing styles ... */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 992px) { 
+            /* Adjust layout for medium screens if needed */
+            .report-content-area {
+                 max-height: 40vh; 
+            }
+        }
+        @media (max-width: 768px) {
+            .report-content-area {
+                padding: 1rem; 
+                max-height: 35vh; 
+            }
+            .page-header {
+                padding: 2rem 1rem;
+            }
+            .page-header h1 {
+                 font-size: 1.8rem;
+            }
+            .chat-section {
+                 padding: 0.75rem;
+            }
+        }
+        .footer-text {
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1><i class="bi bi-clipboard-pulse"></i> Personalized Weekly Plan</h1>
+    </div>
+
+    <div class="container">
+        <!-- Report Section -->
+        <div class="report-section">
+            <!-- Status Alert -->
+            {% if file_exists %}
+                <div class="alert alert-success d-flex justify-content-between align-items-center flex-wrap" role="alert">
+                    <span><i class="bi bi-check-circle-fill"></i> Report File Found.</span>
+                    {% if last_updated %}
+                        <small class="text-muted"><span><i class="bi bi-calendar-check"></i> Last Updated:</span> {{ last_updated }}</small>
+                    {% endif %}
+                </div>
+            {% else %}
+                 <div class="alert alert-warning d-flex align-items-center" role="alert">
+                     <span><i class="bi bi-exclamation-triangle-fill"></i> Report File Not Found or cannot be read. Waiting...</span>
+                </div>
+            {% endif %}
+    
+            <!-- Report Card -->
+            <div class="card report-card">
+                 {% if file_exists %}
+                     <button id="copyButton" class="btn btn-sm btn-outline-secondary copy-btn" title="Copy to Clipboard">
+                        <i class="bi bi-clipboard"></i>
+                     </button>
+                 {% endif %}
+                <div class="card-body"> 
+                    <div class="report-content-area">
+                        <pre id="reportContent">{{ report_content }}</pre> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <!-- Chat Section (Added) -->
+        <div class="chat-section">
+             <h2><i class="bi bi-robot"></i> Ask About Your Health</h2>
+            <div class="chat-box" id="chatBox">
+                <!-- Chat messages will appear here -->
+                <div class="chat-message bot-message">
+                    Hello! How can I help you with learning about your health?
+                </div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator" style="display: none; margin-bottom: 0.5rem; height: 20px;">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" class="form-control" placeholder="Type your message...">
+                <button id="sendButton" class="btn btn-primary"><i class="bi bi-send"></i></button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Footer outside main container -->
+    <p class="text-center mt-3 mb-3 footer-text">Report view automatically refreshes every {{ refresh_interval }} seconds.</p>
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Report Copy Script --- 
+        const copyButton = document.getElementById('copyButton');
+        const reportContent = document.getElementById('reportContent');
+
+        if (copyButton && reportContent) {
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(reportContent.innerText)
+                    .then(() => {
+                        const originalIcon = '<i class="bi bi-clipboard"></i>';
+                        copyButton.innerHTML = '<i class="bi bi-clipboard-check"></i>';
+                        setTimeout(() => {
+                            copyButton.innerHTML = originalIcon;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+        }
+        
+        // --- Chat Logic Script --- 
+        const chatBox = document.getElementById('chatBox');
+        const userInput = document.getElementById('userInput');
+        const sendButton = document.getElementById('sendButton');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        function addMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', sender === 'user' ? 'user-message' : 'bot-message');
+            messageDiv.textContent = message;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            typingIndicator.style.display = 'block';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.style.display = 'none';
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            addMessage(message, 'user');
+            userInput.value = ''; 
+            showTypingIndicator();
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+
+                hideTypingIndicator();
+
+                if (!response.ok) {
+                    let errorMsg = `Error: ${response.status} ${response.statusText}`;
+                    try {
+                         const errorData = await response.json();
+                         errorMsg = errorData.error || errorMsg;
+                    } catch (e) { /* Ignore */ }
+                    addMessage(`Sorry, error: ${errorMsg}`, 'bot');
+                    return;
+                }
+
+                const data = await response.json();
+                addMessage(data.response, 'bot');
+
+            } catch (error) {
+                hideTypingIndicator();
+                console.error("Fetch error:", error);
+                addMessage("Sorry, could not connect.", 'bot');
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,16 @@
+WARNING:  [game_data_agent]: Endpoint configuration overrides mailbox setting.
+INFO:     [game_data_agent]: Starting agent with address: agent1q0entn3aqtwuqamq6c4v6dlujgdwd5rn5na3mzx08rj9986n6k52ggrrvqu
+INFO:     [game_data_agent]: Agent game_data_agent starting up.
+INFO:     [game_data_agent]: Address: agent1q0entn3aqtwuqamq6c4v6dlujgdwd5rn5na3mzx08rj9986n6k52ggrrvqu
+INFO:     [game_data_agent]: Will read external game data from: /Users/sakethpoori/Documents/lahax/received_game_data.json
+INFO:     [game_data_agent]: Agent inspector available at https://agentverse.ai/inspect/?uri=http%3A//127.0.0.1%3A8004&address=agent1q0entn3aqtwuqamq6c4v6dlujgdwd5rn5na3mzx08rj9986n6k52ggrrvqu
+INFO:     [game_data_agent]: Starting server on http://0.0.0.0:8004 (Press CTRL+C to quit)
+INFO:     [uagents.registration]: Registration on Almanac API successful
+INFO:     [uagents.registration]: Almanac contract registration is up to date!
+INFO:     [game_data_agent]: Received analysis request from orchestrator (agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle): Request AI game data analysis
+INFO:     [game_data_agent]: Attempting to read game data from: /Users/sakethpoori/Documents/lahax/received_game_data.json
+INFO:     [game_data_agent]: Successfully read 6 entries from received_game_data.json
+INFO:     [game_data_agent]: Sending game data analysis request to Groq...
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     [game_data_agent]: Received analysis report from Groq.
+INFO:     [game_data_agent]: Sending analysis report back to orchestrator...

@@ -1,0 +1,49 @@
+{
+    "support_system": {
+      "caregiver": "spouse",
+      "social_support": "limited social interaction"
+    },
+    "functional_assessment": {
+      "ADLs": {
+        "eating": "independent",
+        "dressing": "independent",
+        "bathing": "requires assistance"
+      },
+      "IADLs": {
+        "managing_finances": "requires assistance",
+        "shopping": "independent"
+      }
+    },
+    "lifestyle_factors": {
+      "diet": "balanced diet, low in processed foods",
+      "exercise": "low-impact exercise 3 times a week",
+      "smoking": "non-smoker",
+      "alcohol_use": "occasional"
+    },
+    "comorbid_conditions": [
+      "hypertension",
+      "type 2 diabetes"
+    ],
+    "fall_risk_assessment": {
+      "history_of_falls": "yes",
+      "current_fall_risk": "moderate"
+    },
+    "sleep_quality": {
+      "sleep_duration": "7 hours per night",
+      "sleep_disturbances": "occasional"
+    },
+    "social_activity": {
+      "community_involvement": "active in local Parkinson’s support group",
+      "family_engagement": "frequent family visits"
+    },
+    "dietary_compliance": {
+      "compliance_level": "high",
+      "dietary_restrictions": "low sodium, low sugar"
+    },
+    "care_plan_review": {
+      "last_review_date": "2025-03-15",
+      "next_review_date": "2025-09-15",
+      "review_frequency": "every 6 months"
+    }
+  }
+  

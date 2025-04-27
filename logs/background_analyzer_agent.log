@@ -1,0 +1,12 @@
+WARNING:  [background_agent]: Endpoint configuration overrides mailbox setting.
+INFO:     [background_agent]: Starting agent with address: agent1qvxfehkpsetzsjjfcl8yr0jn3l8xms7eygdcjrhq63n7a2s6rmxlz8hjpf2
+INFO:     [background_agent]: Agent background_agent starting up.
+INFO:     [background_agent]: Address: agent1qvxfehkpsetzsjjfcl8yr0jn3l8xms7eygdcjrhq63n7a2s6rmxlz8hjpf2
+INFO:     [background_agent]: Agent inspector available at https://agentverse.ai/inspect/?uri=http%3A//127.0.0.1%3A8002&address=agent1qvxfehkpsetzsjjfcl8yr0jn3l8xms7eygdcjrhq63n7a2s6rmxlz8hjpf2
+INFO:     [background_agent]: Starting server on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     [uagents.registration]: Registration on Almanac API successful
+INFO:     [uagents.registration]: Almanac contract registration is up to date!
+INFO:     [background_agent]: Received message from agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle: Request background info plan
+INFO:     [background_agent]: Generating demographics recovery plan...
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     [background_agent]: Sending plan back...

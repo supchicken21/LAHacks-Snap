@@ -1,0 +1,23 @@
+Gemini client configured successfully.
+WARNING:  [main_orchestrator_agent]: Endpoint configuration overrides mailbox setting.
+INFO:     [main_orchestrator_agent]: Starting agent with address: agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle
+INFO:     [main_orchestrator_agent]: Agent main_orchestrator_agent starting up.
+INFO:     [main_orchestrator_agent]: Address: agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle
+INFO:     [main_orchestrator_agent]: Waiting for POST requests on /generate_plan
+INFO:     [main_orchestrator_agent]: Agent inspector available at https://agentverse.ai/inspect/?uri=http%3A//127.0.0.1%3A8006&address=agent1qv0dz6yv059jtuvj0n49gpey7ey6j6xcc3tc0y4sljrunrprqegfyt6qwle
+INFO:     [main_orchestrator_agent]: Starting server on http://0.0.0.0:8006 (Press CTRL+C to quit)
+INFO:     [uagents.registration]: Registration on Almanac API successful
+INFO:     [uagents.registration]: Almanac contract registration is up to date!
+INFO:     [main_orchestrator_agent]: Received /generate_plan request.
+INFO:     [main_orchestrator_agent]: Requesting data from all agents...
+INFO:     [main_orchestrator_agent]: Sent request to Game Data agent: agent1q0entn3aqtwuqamq6c4v6dlujgdwd5rn5na3mzx08rj9986n6k52ggrrvqu
+INFO:     [main_orchestrator_agent]: Finished sending all active requests.
+INFO:     [main_orchestrator_agent]: Waiting up to 30.0s for 3 agent response(s)...
+INFO:     [main_orchestrator_agent]: Received Medical response from agent1q2e74xhpyrm3vehhj4ztrjvf24sxgvcsfgrl9hdzrr5a75dn2jvzsj5y4al
+INFO:     [main_orchestrator_agent]: Received Background response from agent1qvxfehkpsetzsjjfcl8yr0jn3l8xms7eygdcjrhq63n7a2s6rmxlz8hjpf2
+INFO:     [main_orchestrator_agent]: Received Game Data Analysis response from agent1q0entn3aqtwuqamq6c4v6dlujgdwd5rn5na3mzx08rj9986n6k52ggrrvqu
+INFO:     [main_orchestrator_agent]: All expected agent responses received.
+INFO:     [main_orchestrator_agent]: Proceeding to generate plan with 3 received response(s).
+INFO:     [main_orchestrator_agent]: Generating combined plan with Gemini...
+INFO:     [main_orchestrator_agent]: Combined plan generated.
+INFO:     [main_orchestrator_agent]: Plan saved to ./personalized_weekly_plan.txt

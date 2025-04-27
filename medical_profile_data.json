@@ -1,0 +1,42 @@
+{
+    "patient_id": "LAX2025",
+    "age": 65,
+    "gender": "male",
+    "neuro_disorder_details": {
+      "date_of_diagnosis": "2024-09-25",
+      "disorder_type": "Parkinson's disease",
+      "symptoms": [
+        "tremors",
+        "rigidity",
+        "bradykinesia",
+        "postural instability"
+      ],
+      "severity": "moderate",
+      "medications": [
+        "Levodopa",
+        "Carbidopa"
+      ],
+      "treatment_plan": "ongoing, with physical therapy and medication management",
+      "family_history": {
+        "parkinsons": "father",
+        "other_neuro_conditions": ["Alzheimer's disease"]
+      }
+    },
+    "current_status": {
+      "mobility": "requires a walking aid",
+      "cognitive_function": "no significant cognitive impairment",
+      "mental_health": "occasional anxiety"
+    },
+    "neuroimaging": {
+      "MRI": "no significant changes",
+      "PET_scan": "reduced dopaminergic activity"
+    },
+    "laboratory_tests": {
+      "blood_tests": {
+        "thyroid_function": "normal",
+        "glucose_levels": "normal",
+        "vitamin_B12": "normal"
+      }
+    }
+  }
+  
